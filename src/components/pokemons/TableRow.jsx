@@ -2,8 +2,6 @@ import IconShow from '../../img/icon_show.svg'
 
 function TableRow({data}) {
 
-  console.log(data.types)
-
   return (
     <tr className="text-left">
       <td className="hidden lg:table-cell">{data.id}</td>
@@ -19,7 +17,7 @@ function TableRow({data}) {
       </td>
       <td>
         {data.types.map((element) => {
-          return (<p className="text-sm text-primary font-open capitalize">{element.type.name}</p>) 
+          return (<p key={element.type.name} className="text-sm text-primary font-open capitalize">{element.type.name}</p>) 
         })}
       </td>
       <td><p className="text-sm text-primary font-open text-center">{data.weight/10} Kg</p></td>

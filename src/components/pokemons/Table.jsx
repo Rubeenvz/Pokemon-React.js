@@ -28,7 +28,7 @@ function Table() {
           <div className="flex gap-4 mt-6 lg:mt-0">
             <div className="flex items-center px-4 rounded-full bg-tertiary gap-4">
               <img alt="Icon" src={IconSearchGray} />
-              <input v-model="search" className="bg-transparent font-normal text-sm text-primary font-open" type="text" placeholder="Search" />
+              <input readOnly className="bg-transparent font-normal text-sm text-primary font-open" type="text" placeholder="Search" />
             </div>
             <div>
               <button className="button-secondary">
@@ -39,19 +39,21 @@ function Table() {
         </div>
         <div className="mt-6 overflow-scroll">
           <table className="w-full">
-            <tr className="text-left">
-              <th className="hidden lg:table-cell">ID</th>
-              <th><p className="text-sm text-primary font-montserrat font-semibold">Pokemon</p></th>
-              <th><p className="text-sm text-primary font-montserrat font-semibold">Type</p></th>
-              <th><p className="text-sm text-primary font-montserrat font-semibold text-center">Weight</p></th>
-              <th><p className="text-sm text-primary font-montserrat font-semibold text-center">Height</p></th>
-              <th><p className="text-sm text-primary font-montserrat font-semibold text-center">Base</p></th>
-              <th><p className="text-sm text-primary font-montserrat font-semibold text-center">Detail</p></th>
-            </tr>
+            <thead>
+              <tr className="text-left">
+                <th className="hidden lg:table-cell">ID</th>
+                <th><p className="text-sm text-primary font-montserrat font-semibold">Pokemon</p></th>
+                <th><p className="text-sm text-primary font-montserrat font-semibold">Type</p></th>
+                <th><p className="text-sm text-primary font-montserrat font-semibold text-center">Weight</p></th>
+                <th><p className="text-sm text-primary font-montserrat font-semibold text-center">Height</p></th>
+                <th><p className="text-sm text-primary font-montserrat font-semibold text-center">Base</p></th>
+                <th><p className="text-sm text-primary font-montserrat font-semibold text-center">Detail</p></th>
+              </tr>
+            </thead>
             <tbody>
-            {pokemons.map((pokemon) => {
-              return (<TableRow key={pokemon.id} data={pokemon} />) 
-            })}
+              {pokemons.map((pokemon) => {
+                return (<TableRow key={pokemon.id} data={pokemon} />) 
+              })}
             </tbody>
           </table>
         </div>
@@ -59,7 +61,7 @@ function Table() {
           <div className="flex justify-end gap-6 flex-col-reverse lg:flex-row">
             <div className="flex gap-6 flex-col lg:flex-row text-center">
               <p className="text-sm text-primary font-roboto">Rows per page :</p>
-              <input className="w-full lg:w-max text-sm text-primary font-roboto text-center" v-model="pageSize" type="number" value="5" />
+              <input readOnly className="w-full lg:w-max text-sm text-primary font-roboto text-center" type="number" value="5" />
             </div>
             <div className="flex justify-center lg:block gap-6">
               <button className="py-4 px-4 lg:py-0 lg:px-4">
