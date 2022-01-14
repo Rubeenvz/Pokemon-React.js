@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* App */
+
+input {
+  @apply focus:outline-none;
+}
+
+.main-grid__container {
+  grid-template-columns: 17.85% 82.15%;
+}
+
+@media (max-width: 1023.98px) {
+  .main-grid__first {
+    left: -100%;
+  }
+
+  .main-grid__first.active {
+    left: 0%;
+  }
+}
+
+.button-primary {
+  @apply block font-open text-sm text-white font-normal px-4 py-3 rounded bg-secondary text-center;
+}
+
+.button-secondary {
+  @apply block text-sm font-open font-normal px-4 py-3 rounded border border-secondary text-primary text-center;
+}
+
+@media (min-width: 1024px) {
+  .general-form__container {
+    max-width: 360px;
+  }
+}
+
+/* Sidebar */
+
+.main-sidebar__header {
+  flex: 1 0 auto;
+}
+
+.main-sidebar__footer {
+  flex-shrink: 0;
+}
+
+[aria-current],
+.router-link-active {
+  @apply bg-tertiary;
+}
+
+/* Nav */
+
+.main-nav__user {
+  width: 40px;
+  height: 40px;
+}
