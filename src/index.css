@@ -23,11 +23,11 @@ input {
 }
 
 .button-primary {
-  @apply block font-open text-sm text-white font-normal px-4 py-3 rounded bg-secondary text-center;
+  @apply block font-open text-sm font-normal px-4 py-3 rounded border text-center bg-secondary border-secondary text-white;
 }
 
 .button-secondary {
-  @apply block text-sm font-open font-normal px-4 py-3 rounded border border-secondary text-primary text-center;
+  @apply block font-open text-sm font-normal px-4 py-3 rounded border text-center bg-tertiary border-tertiary text-primary;
 }
 
 @media (min-width: 1024px) {
@@ -56,4 +56,27 @@ input {
 .main-nav__user {
   width: 40px;
   height: 40px;
+}
+
+/* Table */
+
+th,
+td {
+  @apply border-tertiary border-b p-4;
+}
+
+tbody tr {
+  @apply hover:bg-tertiary;
+}
+
+.tag {
+  @apply uppercase rounded-t-sm px-2 w-max py-1 text-center;
+}
+
+.tag.inactive {
+  @apply text-cred bg-credlight;
+}
+
+.tag.active {
+  @apply text-cgreen bg-cgreenlight;
 }

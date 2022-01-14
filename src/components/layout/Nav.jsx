@@ -19,7 +19,7 @@ function Nav() {
       <div className="flex items-center flex-row-reverse lg:flex-row lg:mr-7 gap-2">
         <div className="main-nav__user bg-white rounded-full"></div>
         <div className="text-right lg:text-left">
-          <p className="text-white text-sm font-roboto font-medium">Creado por:</p>
+          <p className="text-white text-sm font-roboto font-medium">Created by:</p>
           <a href="https://rubeenvz.com/" className="text-white text-sm font-roboto font-medium">Rubeenvz</a>
         </div>
       </div>

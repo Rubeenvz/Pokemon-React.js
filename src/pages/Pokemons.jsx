@@ -1,8 +1,10 @@
+import Table from '../components/pokemons/Table'
+
 function Pokemons() {
   
   return (
     <div>
-      <p>Hola</p>
+      <Table />
     </div>
   )
 }

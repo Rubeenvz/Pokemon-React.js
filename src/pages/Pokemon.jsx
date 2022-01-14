@@ -2,7 +2,7 @@ function Pokemon() {
   
   return (
     <div>
-      <p>Hola</p>
+      <p>Pokemon</p>
     </div>
   )
 }
