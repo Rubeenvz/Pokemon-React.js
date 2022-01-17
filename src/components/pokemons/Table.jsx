@@ -18,7 +18,6 @@ function Table() {
       return pokemon
     }))
     setPokemons(pokemons)
-    
   },[])
 
   return (

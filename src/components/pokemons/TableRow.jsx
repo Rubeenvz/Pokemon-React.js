@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import IconShow from '../../img/icon_show.svg'
 
 function TableRow({data}) {
@@ -6,14 +8,14 @@ function TableRow({data}) {
     <tr className="text-left">
       <td className="hidden lg:table-cell">{data.id}</td>
       <td>
-        <div className="flex gap-4 items-center">
-          <div className="adm-user__img hidden lg:block">
+        <Link to={`/pokemon/${data.id}`} className="flex gap-4 items-center">
+          <div className="adm-user__img">
             <img src={data.sprites.front_default} alt="{data.name}" />
           </div>
-          <article className="text-sm text-primary font-open font-semibold capitalize">
+          <p className="text-sm text-primary font-open font-semibold capitalize hidden lg:block">
             {data.name}
-          </article>
-        </div>
+          </p>
+        </Link>
       </td>
       <td>
         {data.types.map((element) => {
@@ -25,9 +27,9 @@ function TableRow({data}) {
       <td><p className="text-sm text-primary font-open text-center" >{data.base_experience} XP</p></td>
       <td>
         <div className="flex items-center justify-center gap-4 flex-col lg:flex-row">
-          <article>
+          <Link to={`/pokemon/${data.id}`}>
             <img alt="Icon" src={IconShow} />
-          </article>
+          </Link>
         </div>
       </td>
     </tr>

@@ -1,11 +1,13 @@
+import { Link } from 'react-router-dom'
+
 import IconSearch from '../../img/icon_search.svg'
 import Iconlogout from '../../img/icon_logout.svg'
 
-function Nav() {
+function Nav({setResponsiveMenu}) {
 
   return (
     <div className="flex justify-between lg:justify-end w-full py-5 px-6 lg:px-16 bg-secondary">
-    <button className="text-white text-sm font-roboto font-medium lg:hidden">
+    <button onClick={e => setResponsiveMenu(true)} className="text-white text-sm font-roboto font-medium lg:hidden">
       MENU
     </button>
     <div className="flex items-center">
@@ -23,9 +25,9 @@ function Nav() {
           <a href="https://rubeenvz.com/" className="text-white text-sm font-roboto font-medium">Rubeenvz</a>
         </div>
       </div>
-      <div className="hidden lg:flex">
+      <Link to="/" className="hidden lg:flex">
         <img className="mr-3" alt="Icon" src={Iconlogout} />
-      </div>
+      </Link>
     </div>
   </div>
   )
