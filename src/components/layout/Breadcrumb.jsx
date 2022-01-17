@@ -1,10 +1,12 @@
-function Breadcrumb() {
+import { Link } from 'react-router-dom'
+
+function Breadcrumb({title}) {
   return (
     <div>
       <div>
-        <a class="text-primary text-base font-open font-normal" to="/">Inicio</a> <span class="text-secondary text-base font-open font-normal"> > Name</span>
+        <Link className="text-primary text-base font-open font-normal" to="/">Home</Link> <span className="text-secondary text-base font-open font-normal"> > {title}</span>
       </div>
-      <h1 class="font-semibold text-xl font-montserrat text-primary">{{title}}</h1>
+      <h1 className="font-semibold text-xl font-montserrat text-primary">{title}</h1>
     </div>
   )
 }

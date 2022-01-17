@@ -23,11 +23,11 @@ input {
 }
 
 .button-primary {
-  @apply block font-open text-sm text-white font-normal px-4 py-3 rounded bg-secondary text-center;
+  @apply block font-open text-sm font-normal px-4 py-3 rounded border text-center bg-secondary border-secondary text-white;
 }
 
 .button-secondary {
-  @apply block text-sm font-open font-normal px-4 py-3 rounded border border-secondary text-primary text-center;
+  @apply block font-open text-sm font-normal px-4 py-3 rounded border text-center bg-tertiary border-tertiary text-primary;
 }
 
 @media (min-width: 1024px) {
@@ -46,14 +46,125 @@ input {
   flex-shrink: 0;
 }
 
-[aria-current],
-.router-link-active {
-  @apply bg-tertiary;
-}
-
 /* Nav */
 
-.main-nav__user {
+.main-nav__pokemon {
   width: 40px;
   height: 40px;
+}
+
+/* Table */
+
+th,
+td {
+  @apply border-tertiary border-b p-4;
+}
+
+tbody tr {
+  @apply hover:bg-tertiary;
+}
+
+.main-pokemon__img {
+  position: relative;
+}
+
+tr .main-pokemon__img .secondary{
+  @apply absolute left-0 top-0 opacity-0;
+}
+
+tr:hover .main-pokemon__img .secondary{
+  @apply opacity-100;
+}
+
+.tag.fire {
+  @apply text-red-600;
+}
+
+.tag.normal {
+  @apply text-pink-300;
+}
+
+.tag.normal {
+  @apply text-orange-400;
+}
+
+.tag.bug {
+  @apply text-green-300;
+}
+
+.tag.dark {
+  @apply text-black;
+}
+
+.tag.grass {
+  @apply text-green-900;
+}
+
+.tag.poison {
+  @apply text-indigo-600;
+}
+
+.tag.water {
+  @apply text-blue-300;
+}
+
+.tag.flying {
+  @apply text-gray-600;
+}
+
+.tag.electric {
+  @apply text-yellow-500;
+}
+
+.tag.ground {
+  @apply text-yellow-900;
+}
+
+.tag.fairy {
+  @apply text-purple-900;
+}
+
+.tag.psychic {
+  @apply text-pink-900;
+}
+
+.tag.dragon {
+  @apply text-red-900;
+}
+
+.tag.ice {
+  @apply text-blue-900;
+}
+
+.tag.rock {
+  @apply text-stone-900;
+}
+
+/* Info */
+
+.info-pokemon__grid {
+  grid-template-columns: auto auto auto;
+  row-gap: 26px;
+}
+@media (max-width: 1023.98px) {
+  .info-pokemon__grid {
+  grid-template-columns: 100%;
+    row-gap: 26px;
+  }
+}
+
+/* Index */
+
+.general-pokeball__strip {
+  min-height: 40px;
+}
+
+.general-pokeball__button {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border: 20px solid;
 }

@@ -1,8 +1,14 @@
+import Breadcrumb from '../components/layout/Breadcrumb'
+import Table from '../components/pokemons/Table'
+
 function Pokemons() {
   
   return (
     <div>
-      <p>Hola</p>
+      <div>
+        <Breadcrumb title="Pokemons"/>
+      </div>
+      <Table />
     </div>
   )
 }
