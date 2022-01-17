@@ -10,7 +10,6 @@ function Info() {
   const getPokemon = async () => {
     const url = `https://pokeapi.co/api/v2/pokemon/${params.id}`
     const response = await (await fetch(url)).json()
-    console.log(response)
     setPokemon(response)
   }
 
@@ -22,10 +21,10 @@ function Info() {
     <div className="pt-6 mb-9">
       <div className="mb-6">
         <div className="flex gap-4">
-          <div className="adm-user__img mx-auto lg:mx-0">
+          <div className="main-pokemon__img mx-auto lg:mx-0">
             {pokemon.sprites && <img src={pokemon.sprites.front_default} alt={pokemon.name} />}
           </div>
-          <div className="adm-user__img mx-auto lg:mx-0">
+          <div className="main-pokemon__img mx-auto lg:mx-0">
             {pokemon.sprites && <img src={pokemon.sprites.front_shiny} alt={pokemon.name} />}
           </div>
         </div>
@@ -41,7 +40,7 @@ function Info() {
         <div>
           <p className="font-normal text-xs uppercase text-primary font-open">Types</p>
           {pokemon.types && pokemon.types.map((element) => {
-            return (<p key={element.type.name}  className="font-semibold text-base text-primary font-open capitalize">{element.type.name}</p>) 
+            return (<p key={element.type.name}  className={`${element.type.name} font-semibold text-base text-primary font-open capitalize tag`}>{element.type.name}</p>) 
           })}
         </div>
         <div>

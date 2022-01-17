@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 
-import IconSearch from '../../img/icon_search.svg'
 import Iconlogout from '../../img/icon_logout.svg'
 
 function Nav({setResponsiveMenu}) {
@@ -11,12 +10,6 @@ function Nav({setResponsiveMenu}) {
         MENU
       </button>
       <div className="flex items-center">
-        <div className="hidden lg:flex items-center">
-          <input id="input_search" className="mr-4 bg-secondary text-white" type="text" />
-          <label htmlFor="input_search">
-            <img className="mr-3" alt="Icon" src={IconSearch} />
-          </label>
-        </div>
         <div className="hidden lg:flex border-r border-white lg:mx-9 h-full"></div>
         <div className="flex items-center flex-row-reverse lg:flex-row lg:mr-7 gap-2">
           <div className="main-nav__pokemon bg-white rounded-full"></div>
