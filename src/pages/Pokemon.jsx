@@ -1,8 +1,10 @@
+import Info from '../components/pokemon/Info'
+
 function Pokemon() {
   
   return (
     <div>
-      <p>Pokemon</p>
+      <Info />
     </div>
   )
 }

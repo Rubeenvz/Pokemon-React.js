@@ -46,14 +46,9 @@ input {
   flex-shrink: 0;
 }
 
-[aria-current],
-.router-link-active {
-  @apply bg-tertiary;
-}
-
 /* Nav */
 
-.main-nav__user {
+.main-nav__pokemon {
   width: 40px;
   height: 40px;
 }
@@ -79,4 +74,17 @@ tbody tr {
 
 .tag.active {
   @apply text-cgreen bg-cgreenlight;
+}
+
+/* Info */
+
+.info-pokemon__grid {
+  grid-template-columns: auto auto auto;
+  row-gap: 26px;
+}
+@media (max-width: 1023.98px) {
+  .info-pokemon__grid {
+  grid-template-columns: 100%;
+    row-gap: 26px;
+  }
 }

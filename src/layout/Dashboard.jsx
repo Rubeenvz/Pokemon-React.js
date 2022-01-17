@@ -18,7 +18,7 @@ function Dashboard() {
           <Nav setResponsiveMenu={setResponsiveMenu} />
         </div>
         <div className="p-6">
-        <Outlet />
+          <Outlet />
         </div>
       </div>
     </div>

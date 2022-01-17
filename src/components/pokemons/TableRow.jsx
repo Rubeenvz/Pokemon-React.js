@@ -10,7 +10,7 @@ function TableRow({data}) {
       <td>
         <Link to={`/pokemon/${data.id}`} className="flex gap-4 items-center">
           <div className="adm-user__img">
-            <img src={data.sprites.front_default} alt="{data.name}" />
+            <img src={data.sprites.front_default} alt={data.name} />
           </div>
           <p className="text-sm text-primary font-open font-semibold capitalize hidden lg:block">
             {data.name}

@@ -45,7 +45,7 @@ function Nav({setResponsiveMenu}) {
         <Link to="/" className="mb-4 bg-tertiary rounded p-3 block">
           <div className="flex justify-between items-center">
             <div>
-              <p className="text-sm text-primary font-open font-normal">Log Out</p>
+              <p className="text-sm text-primary font-open font-normal">Sign out</p>
               <p className="underline text-xs text-primary font-open font-normal">Return to home page</p>
             </div>
             <div>
