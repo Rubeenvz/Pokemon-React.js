@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import Index from "./layout/Index";
-import Dashboard from "./layout/Dashboard";
+import Index from "./layout/Index"
+import Dashboard from "./layout/Dashboard"
 
-import Pokemons from "./pages/Pokemons";
-import Pokemon from "./pages/Pokemon";
+import Pokemons from "./pages/Pokemons"
+import Pokemon from "./pages/Pokemon"
 
 function App() {
   
