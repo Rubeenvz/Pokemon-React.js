@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 
 import TableRow from './TableRow'
 
-import IconSearchGray from '../../img/icon_search-gray.svg'
 import IconRight from '../../img/icon_right.svg'
 import IconLeft from '../../img/icon_left.svg'
 
@@ -53,19 +52,6 @@ function Table() {
   return (
     <>
       <div>
-        <div className="mt-6 flex justify-between flex-col-reverse lg:flex-row">
-          <div className="flex gap-4 mt-6 lg:mt-0">
-            <div className="flex items-center px-4 rounded-full bg-tertiary gap-4">
-              <img alt="Icon" src={IconSearchGray} />
-              <input readOnly className="bg-transparent font-normal text-sm text-primary font-open" type="text" placeholder="Search" />
-            </div>
-            <div>
-              <button className="button-secondary">
-                Search
-              </button>
-            </div>
-          </div>
-        </div>
         <div className="mt-6 overflow-scroll">
           <table className="w-full">
             <thead>

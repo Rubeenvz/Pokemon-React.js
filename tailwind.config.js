@@ -16,13 +16,10 @@ module.exports = {
     colors: {
       transparent: "transparent",
       current: "currentColor",
-      primary: "#323232",
+      primary: "#0A285F",
       secondary: "#FFCC00",
       tertiary: "#0075BE1A",
-      cgreen: "#4CAF50",
-      cgreenlight: "#E8F5E9",
-      cred: "#EB5757",
-      credlight: "#FFE1E0",
+      quaternary: "#FB1B1B",
       black: colors.black,
       white: colors.white,
       gray: colors.coolGray,
@@ -33,6 +30,8 @@ module.exports = {
       indigo: colors.indigo,
       purple: colors.violet,
       pink: colors.pink,
+      stone: colors.stone,
+      orange: colors.orange
     },
     spacing: {
       px: "1px",

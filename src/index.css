@@ -64,16 +64,80 @@ tbody tr {
   @apply hover:bg-tertiary;
 }
 
-.tag {
-  @apply uppercase rounded-t-sm px-2 w-max py-1 text-center;
+.main-pokemon__img {
+  position: relative;
 }
 
-.tag.inactive {
-  @apply text-cred bg-credlight;
+tr .main-pokemon__img .secondary{
+  @apply absolute left-0 top-0 opacity-0;
 }
 
-.tag.active {
-  @apply text-cgreen bg-cgreenlight;
+tr:hover .main-pokemon__img .secondary{
+  @apply opacity-100;
+}
+
+.tag.fire {
+  @apply text-red-600;
+}
+
+.tag.normal {
+  @apply text-pink-300;
+}
+
+.tag.normal {
+  @apply text-orange-400;
+}
+
+.tag.bug {
+  @apply text-green-300;
+}
+
+.tag.dark {
+  @apply text-black;
+}
+
+.tag.grass {
+  @apply text-green-900;
+}
+
+.tag.poison {
+  @apply text-indigo-600;
+}
+
+.tag.water {
+  @apply text-blue-300;
+}
+
+.tag.flying {
+  @apply text-gray-600;
+}
+
+.tag.electric {
+  @apply text-yellow-500;
+}
+
+.tag.ground {
+  @apply text-yellow-900;
+}
+
+.tag.fairy {
+  @apply text-purple-900;
+}
+
+.tag.psychic {
+  @apply text-pink-900;
+}
+
+.tag.dragon {
+  @apply text-red-900;
+}
+
+.tag.ice {
+  @apply text-blue-900;
+}
+
+.tag.rock {
+  @apply text-stone-900;
 }
 
 /* Info */
@@ -87,4 +151,20 @@ tbody tr {
   grid-template-columns: 100%;
     row-gap: 26px;
   }
+}
+
+/* Index */
+
+.general-pokeball__strip {
+  min-height: 40px;
+}
+
+.general-pokeball__button {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border: 20px solid;
 }

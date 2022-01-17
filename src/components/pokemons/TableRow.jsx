@@ -9,8 +9,9 @@ function TableRow({data}) {
       <td className="hidden lg:table-cell">{data.id}</td>
       <td>
         <Link to={`/pokemon/${data.id}`} className="flex gap-4 items-center">
-          <div className="adm-user__img">
-            <img src={data.sprites.front_default} alt={data.name} />
+          <div className="main-pokemon__img">
+            <img className="primary" src={data.sprites.front_default} alt={data.name} />
+            <img className="secondary" src={data.sprites.front_shiny} alt={data.name} />
           </div>
           <p className="text-sm text-primary font-open font-semibold capitalize hidden lg:block">
             {data.name}
@@ -19,7 +20,7 @@ function TableRow({data}) {
       </td>
       <td>
         {data.types.map((element) => {
-          return (<p key={element.type.name} className="text-sm text-primary font-open capitalize">{element.type.name}</p>) 
+          return (<p key={element.type.name} className={`${element.type.name} text-sm text-primary font-open capitalize tag`}>{element.type.name}</p>) 
         })}
       </td>
       <td><p className="text-sm text-primary font-open text-center">{data.weight/10} Kg</p></td>
