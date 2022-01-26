@@ -13,7 +13,7 @@ function Pokemon() {
         <Breadcrumb title="Pokemon"/>
       </div>
       <Info />
-      <button className="button-primary" onClick={e => {navigate(-1)}}>
+      <button className="button-primary mx-auto lg:mx-0" onClick={e => {navigate(-1)}}>
         Go back!
       </button>
     </div>

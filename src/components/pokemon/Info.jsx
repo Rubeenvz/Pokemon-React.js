@@ -20,7 +20,7 @@ function Info() {
   return (
     <div className="pt-6 mb-9">
       <div className="mb-6">
-        <div className="flex gap-4">
+        <div className="flex gap-4 max-w-md lg:mx-0 mx-auto">
           <div className="main-pokemon__img mx-auto lg:mx-0">
             {pokemon.sprites && <img src={pokemon.sprites.front_default} alt={pokemon.name} />}
           </div>
