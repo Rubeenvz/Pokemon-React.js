@@ -6,7 +6,7 @@ function TableRow({data}) {
 
   return (
     <tr className="text-left">
-      <td className="hidden lg:table-cell">{data.id}</td>
+      <td className="hidden lg:table-cell text-sm text-primary font-open">{data.id}</td>
       <td>
         <Link to={`/pokemon/${data.id}`} className="flex gap-4 items-center">
           <div className="main-pokemon__img">

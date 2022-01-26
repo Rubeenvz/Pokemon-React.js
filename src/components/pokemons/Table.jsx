@@ -56,7 +56,7 @@ function Table() {
           <table className="w-full">
             <thead>
               <tr className="text-left">
-                <th className="hidden lg:table-cell">ID</th>
+                <th className="text-sm text-primary font-montserrat hidden lg:table-cell">ID</th>
                 <th><p className="text-sm text-primary font-montserrat font-semibold">Pokemon</p></th>
                 <th><p className="text-sm text-primary font-montserrat font-semibold">Types</p></th>
                 <th><p className="text-sm text-primary font-montserrat font-semibold text-center">Weight</p></th>
