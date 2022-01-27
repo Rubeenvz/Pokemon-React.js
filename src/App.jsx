@@ -5,6 +5,7 @@ import Dashboard from "./layout/Dashboard"
 
 import Pokemons from "./pages/Pokemons"
 import Pokemon from "./pages/Pokemon"
+import Trainers from "./pages/Trainers"
 
 function App() {
   
@@ -15,6 +16,9 @@ function App() {
         <Route path="/pokemon" element={<Dashboard />}>
           <Route index element={<Pokemons />}></Route>
           <Route path=":id" element={<Pokemon />}></Route>
+        </Route>
+        <Route path="/trainers" element={<Dashboard />}>
+          <Route index element={<Trainers />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

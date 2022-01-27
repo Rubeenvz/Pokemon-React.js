@@ -1,11 +1,11 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"
 
 import Breadcrumb from '../components/layout/Breadcrumb'
 import Info from '../components/pokemon/Info'
 
 function Pokemon() {
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   return (
     <div>

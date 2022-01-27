@@ -33,6 +33,14 @@ function Nav({setResponsiveMenu}) {
             </Link>
           </li>
           <li>
+            <Link to="/trainers" className={`${params.id == undefined ? 'bg-tertiary' : ''} block border-b border-tertiary hover:bg-tertiary text-sm text-primary`}>
+              <div className="py-3 ml-12 flex items-center content-center">
+                <img className="mr-3" alt="Icon" src={IconPokemon} />
+                <span className="font-open font-normal text-sm">Trainers</span>
+              </div>
+            </Link>
+          </li>
+          <li>
             <button onClick={e => setResponsiveMenu(false)} className="block bg-secondary text-sm text-primary w-full lg:hidden">
               <div className="py-3 flex items-center justify-center content-center text-center">
                 <span className="font-open font-normal text-sm text-white">Close Menu</span>
