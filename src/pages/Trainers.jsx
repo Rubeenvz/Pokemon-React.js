@@ -12,7 +12,7 @@ function Trainers() {
         <Breadcrumb title="Trainers"/>
       </div>
       <TrainersContext>
-        <div className="pt-6 flex items-center flex-col gap-4">
+        <div className="flex items-center flex-col gap-8">
           <div className="w-full max-w-lg">
             <Card />
           </div>

@@ -168,3 +168,21 @@ tr:hover .main-pokemon__img .secondary{
   top: 50%;
   border: 20px solid;
 }
+
+/* Card */
+
+.trainer-card__container {
+  width: 360px;
+  height: 360px;
+}
+
+.trainer-card__img {
+  width: 90px;
+  height: 90px;
+  top: -55px;
+  border-width: 15px;
+}
+
+.trainer-card__stripe {
+  height: 20px;
+}
