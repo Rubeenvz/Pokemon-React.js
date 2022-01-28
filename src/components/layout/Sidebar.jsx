@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
 
 import Logo from '../../img/logo.svg'
 import IconPokemons from '../../img/icon_pokemons.svg'
@@ -7,7 +7,8 @@ import IconExternal from '../../img/icon_external.svg'
 
 function Nav({setResponsiveMenu}) {
 
-  const params = useParams()
+  const location = useLocation();
+  const params = useParams();
 
   return (
     <div className="flex flex-col h-full">
@@ -17,7 +18,7 @@ function Nav({setResponsiveMenu}) {
         </div>
         <ul>
           <li>
-            <Link to="/pokemon" className={`${params.id == undefined ? 'bg-tertiary' : ''} block border-b border-tertiary hover:bg-tertiary text-sm text-primary`}>
+            <Link to="/pokemon" className={`${location.pathname == '/pokemon' ? 'bg-tertiary' : ''} block border-b border-tertiary hover:bg-tertiary text-sm text-primary`}>
               <div className="py-3 ml-12 flex items-center content-center">
                 <img className="mr-3" alt="Icon" src={IconPokemons} />
                 <span className="font-open font-normal text-sm">Pokemons</span>
@@ -25,7 +26,7 @@ function Nav({setResponsiveMenu}) {
             </Link>
           </li>
           <li>
-            <Link to="/pokemon" className={`${params.id != undefined ? 'bg-tertiary' : ''} block border-b border-tertiary hover:bg-tertiary text-sm text-primary`}>
+            <Link to="/pokemon" className={`${location.pathname == `/pokemon/${params.id}` ? 'bg-tertiary' : ''} block border-b border-tertiary hover:bg-tertiary text-sm text-primary`}>
               <div className="py-3 ml-12 flex items-center content-center">
                 <img className="mr-3" alt="Icon" src={IconPokemon} />
                 <span className="font-open font-normal text-sm">Pokemon</span>
@@ -33,7 +34,7 @@ function Nav({setResponsiveMenu}) {
             </Link>
           </li>
           <li>
-            <Link to="/trainers" className={`${params.id == undefined ? 'bg-tertiary' : ''} block border-b border-tertiary hover:bg-tertiary text-sm text-primary`}>
+            <Link to="/trainers" className={`${location.pathname == '/trainers' ? 'bg-tertiary' : ''} block border-b border-tertiary hover:bg-tertiary text-sm text-primary`}>
               <div className="py-3 ml-12 flex items-center content-center">
                 <img className="mr-3" alt="Icon" src={IconPokemon} />
                 <span className="font-open font-normal text-sm">Trainers</span>
